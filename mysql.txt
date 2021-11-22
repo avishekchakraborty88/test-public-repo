@@ -1,0 +1,12 @@
+select  
+    (CASE 
+        WHEN discount_type='flat' THEN ((100*discount_amount)/price)
+        ELSE discount_amount
+        
+    END) AS discount
+    
+ from products;
+-------------
+Select  
+    If(p.discount_type='flat', ((100*discount_amount)/price), discount_amount)) as discount        
+From products;
